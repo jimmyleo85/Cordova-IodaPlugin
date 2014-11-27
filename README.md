@@ -8,7 +8,7 @@ How to run example?
 
 To add this plugin to your cordova project, type:
 
-	cordova plugin add https://github.com/jimmyleo85/IodaPlugin.git
+	cordova plugin add https://github.com/jimmyleo85/Cordova-IodaPlugin.git
 
 And include IodaPlugin.js in your www/index.html  
 
