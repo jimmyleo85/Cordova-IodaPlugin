@@ -61,3 +61,51 @@ In this file we extend `window` object with function `tethering` which calls `co
 
 Arguments to `exec` are allways the same: two callback functions (success and error callback), plugin class name, action name and array of arguments.
 You can pass any number of arguments - they are processed by execute function as described.
+
+plugin.xml
+----------
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+		id="org.ioda.plugin.IodaPlugin"
+		version="1.0.0">
+
+		<name>IodaPlugin</name>
+
+		<description>
+		Cordova plugin example
+		</description>
+
+		<asset src="www/IodaPlugin.js" target="plugins/IodaPlugin.js" />
+
+		<engines>
+			<engine name="cordova" version=">=3.0.0" />
+		</engines>
+
+		<!-- android -->
+		<platform name="android">
+			<config-file target="res/xml/config.xml" parent="/*">
+				<feature name="IodaPlugin">
+					<param name="android-package" value="org.ioda.plugin.IodaPlugin"/>
+				</feature>
+			</config-file>
+
+			<source-file src="src/android/org/ioda/plugin/IodaPlugin.java" target-dir="src/org/ioda/plugin" />
+		</platform>
+
+		<!-- more platforms here -->
+
+	</plugin>
+
+This file tells cordova how to deal with plugin. Package name, class name and (relative) paths to files are defined here. More details about plugin.xml [here](http://docs.phonegap.com/en/3.4.0/plugin_ref_spec.md.html#Plugin%20Specification).
+
+For more details refer:
+
+[Cordova Plugin Development Guide](http://docs.phonegap.com/en/3.4.0/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide)
+<br />
+and
+<br />
+[Android Plugins](http://docs.phonegap.com/en/3.4.0/guide_platforms_android_plugin.md.html#Android%20Plugins)
+<br />
+<br />
+That's it :)
