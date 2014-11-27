@@ -53,7 +53,7 @@ Here is full `www/index.html`:
 IodaPlugin.js
 ---------------
 
-	window.tethering = function(num1, num2, successCallback, errorCallback) {
+	window.tethering = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "IodaPlugin", "tethering", []);
 	};
 
