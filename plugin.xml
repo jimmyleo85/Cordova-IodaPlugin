@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="org.ioda.plugin.IodaPlugin"
+    version="1.0.0">
+
+    <name>IodaPlugin</name>
+
+  <description>
+    Cordova plugin example
+  </description>
+
+  <asset src="www/IodaPlugin.js" target="plugins/IodaPlugin.js" />
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+	    <feature name="IodaPlugin">
+	        <param name="android-package" value="org.ioda.plugin.IodaPlugin"/>
+	    </feature>
+    </config-file>
+
+    <source-file src="src/android/org/ioda/plugin/IodaPlugin.java" target-dir="src/org/ioda/plugin" />
+  </platform>
+
+  <!-- more platforms here -->
+
+</plugin>
