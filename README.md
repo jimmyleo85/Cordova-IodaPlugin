@@ -21,7 +21,7 @@ To call `tethering` from javascript code write:
 
 	window.tethering(function(result) { alert("Result:" + result); }, function(err) { alert(err); });
 
-First two parameters are numbers to tethering, then two functions: success callback and error callback. In this example, page shuld alert "Result: 5". 
+First two parameters are numbers to tethering, then two functions: success callback and error callback. In this example, link should open intent setting Android (Tethering). 
 
 Here is full `www/index.html`:
 
@@ -46,7 +46,7 @@ Here is full `www/index.html`:
 		</head>
 
 		<body onload="onLoad()">
-			<h1>Sample plugin</h1>
+			<h1>Ioda plugin</h1>
 		</body>
 	</html>
 
